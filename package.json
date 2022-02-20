@@ -1,0 +1,21 @@
+{
+	"name": "redditfeed",
+	"version": "1.0.0",
+	"description": "Subreddit Search App",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha",
+		"start": "node server.mjs",
+		"dev": "nodemon server.mjs"
+	},
+	"author": "Tal Hazi",
+	"license": "MIT",
+	"devDependencies": {
+		"mocha": "^9.2.1"
+	},
+	"dependencies": {
+		"ejs": "^3.1.6",
+		"ejs-mate": "^3.0.0",
+		"express": "^4.17.3"
+	}
+}

@@ -1,0 +1,62 @@
+<% layout('./boilerplate/boilerplate') %>
+
+<%- include('./partials/navbar.ejs') %>
+
+<!-- the main subreddit search container -->
+<div id="search-container" class="container">
+    <!-- the search card -->
+    <div id="search" class="card bg-light mb-3">
+        <!-- the body of the search card -->
+        <div class="card-body">
+
+            <!-- the search form -->
+            <form id="search-form">
+
+                <!-- the search input -->
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <!-- search svg icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <input type="text" id="search-input" class="form-control" placeholder="Subreddit to search..." name="searchInput" aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-outline-info">Search</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- sortBy options -->
+                    <div class="col-md-8 mt-3">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-light active">
+                                <input type="radio" name="sortby" value="hot" id="hot" checked>Hot 🔥</label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="sortby" value="new" id="new">New 🌟</label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="sortby" value="top" id="top">Top 🔝</label>
+                        </div>
+                    </div>
+
+                    <!-- limit options -->
+                    <div class="col-md-4 mt-3">
+                        <div class="form-group">
+                            <select name="limit" id="limit" class="form-control">
+                                <option value="5">5 results</option>
+                                <option value="10">10 results</option>
+                                <option value="25" selected>25 results</option>
+                                <option value="50">50 results</option>
+                                <option value="100">100 results</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- will show the subreddit posts -->
+    <div id="results" class="position-relative"></div>

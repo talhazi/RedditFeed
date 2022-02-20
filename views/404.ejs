@@ -1,0 +1,10 @@
+<% layout('./boilerplate/boilerplate') %>
+
+<%- include('./partials/navbar.ejs') %>
+
+<section class="pt-5 text-center container">
+   <h1 class="display-1 py-3">Oh No!! 404!</h1>
+   <p class="h2 font-weight-normal">Sorry, the page you are looking for cannot be found</p>
+   <p class="h2 font-weight-normal py-4"><%= url %></p>
+   <a href="/"><button class="btn btn-dark btn-lg mt-4">Return to search</button></a>
+</section>
